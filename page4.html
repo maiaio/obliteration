@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>urbanisation</title>
+    <link rel="stylesheet" href="style4.css">
+</head>
+<body>
+    <div class="tap-text">tap on the images to build</div>
+
+    <div class="bottom-text">
+        urbanisation
+    </div>
+
+    <div class="container">
+        <a href="page5.html">
+            <button>Obliterate</button>
+        </a>
+    </div>
+
+    <div class="image-container" id="imageContainer">
+        <img src="apartfacade1.jpeg" alt="Image 1" class="random-image" id="img1">
+        <img src="apartfacade2.jpeg" alt="Image 2" class="random-image" id="img2">
+        <img src="apartfacade3.jpeg" alt="Image 3" class="random-image" id="img3">
+        <img src="apartfacade4.jpeg" alt="Image 4" class="random-image" id="img4">
+        <img src="apartfacade6.jpeg" alt="Image 6" class="random-image" id="img6">
+    </div>
+
+    <script>
+        const images = document.querySelectorAll('.random-image');
+        
+        images.forEach(image => {
+            image.addEventListener('click', (e) => {
+                placeImage(e.clientX, e.clientY, image);
+            });
+        });
+
+        function placeImage(x, y, imageElement) {
+            const newImage = document.createElement('img');
+            newImage.src = imageElement.src; 
+            newImage.classList.add('random-image');
+            const randomOffsetX = (Math.random() - 0.5) * 100;
+            const randomOffsetY = (Math.random() - 0.5) * 100;
+            newImage.style.left = `${x + randomOffsetX}px`;
+            newImage.style.top = `${y + randomOffsetY}px`;
+            newImage.style.transform = `scale(${Math.random() * 0.5 + 0.5})`; 
+            document.body.appendChild(newImage); 
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,112 @@
+body {
+    
+    background:white;
+    font-family: Helvetica;
+    font-size:large;
+    margin:0px;
+    text-align: center;
+    display: inline-block;
+    padding: 0px;
+    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.3);
+    border-radius: 10px; 
+
+   
+}
+
+img {
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%, -50%);
+}
+
+.container {
+    text-align: center; 
+    margin-top: 20px; 
+    position:absolute;
+    top:5%;
+    left:50%;
+    transform:translate(-50%, -50%);
+}
+
+button {
+    font-size: 24px;
+    padding: 10px 20px; 
+    cursor: pointer; 
+    background-color: lime; 
+    border: 2px solid #000; 
+    border-radius: 15px;
+    color: #000; 
+}
+.button:active {
+    transform: translateY(4px);
+    box-shadow: 0 1px #3700b3;
+}
+
+p{
+    position:absolute;
+    top:50%;
+    left:80%;
+    transform:translate(-50%, -50%);
+    
+}
+
+.containerbottom {
+    position: relative;
+    min-height: 100vh; 
+}
+
+.bottom-text {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%); 
+    text-align: center;
+    padding: 10px; 
+}
+.tissue {
+    width:700px;
+    height:auto;
+    
+}
+
+
+
+.moving-button {
+    padding: 15px 30px;
+    font-size: 16px;
+    background-color: #03fc03;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    animation: moveAndGrow 10s infinite linear;
+    padding: 10px;
+    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.3);
+    border-radius: 10px; 
+    font-size: 24px;
+    padding: 10px 20px; 
+    cursor: pointer; 
+    background-color: lime; 
+    border: 2px solid #000; 
+    border-radius: 15px;
+    color: #000; 
+}
+
+@keyframes moveAndGrow {
+    0% {
+        transform: translate(100, 100) scale(1);
+    }
+    25% {
+        transform: translate(400px, 100px) scale(1);
+    }
+    50% {
+        transform: translate(-450px, 100px) scale(1);
+    }
+    75% {
+        transform: translate(400px, 50px) scale(1);
+    }
+    100% {
+        transform: translate(0, 50) scale(1);
+    }
+}

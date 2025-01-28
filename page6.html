@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>networks</title>
+    <link rel="stylesheet" href="style6.css">
+</head>
+<body>
+    <div class="bottom-text">
+        networks
+    </div>
+
+    <div class="container">
+        <a href="index.html">
+            <button>Obliterate</button>
+        </a>
+    </div>
+
+    <a href="index.html">
+        <img class="motherboard" src="networksillust1.pdf">
+    </a>
+
+    <script>
+        setTimeout(() => {
+            document.body.style.backgroundColor = 'black';
+            document.body.style.color = 'white';
+            document.querySelector('.bottom-text').style.color = 'white';
+        }, 3000);
+
+        function createDot() {
+            const dot = document.createElement('div');
+            dot.classList.add('dot');
+            dot.style.left = `${Math.random() * window.innerWidth}px`;
+            dot.style.top = `${Math.random() * window.innerHeight}px`;
+
+            document.body.appendChild(dot);
+
+            setTimeout(() => {
+                dot.remove();
+            }, 2000);
+        }
+
+        setInterval(createDot, 500);
+    </script>
+</body>
+</html>
