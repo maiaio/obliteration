@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>branches</title>
+    <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+    <div class="bottom-text">
+        branches
+    </div>
+    <div class="container">
+        <a href="page3.html">
+            <button>Obliterate</button>
+        </a>
+    </div>
+    <img class="branches" src="pagetwobranches.pdf">
+    
+    <script>
+        const body = document.querySelector('body');
+        const cursorContainer = document.createElement('div');
+        body.appendChild(cursorContainer);
+
+        function createChop() {
+            const chop = document.createElement('div');
+            chop.classList.add('chop-shape');
+            chop.innerHTML = '<p class="text">chop!</p>';
+
+            const randomX = Math.random() * (window.innerWidth - 100);
+            const randomY = Math.random() * (window.innerHeight - 100);
+            chop.style.left = `${randomX}px`;
+            chop.style.top = `${randomY}px`;
+
+            body.appendChild(chop);
+
+            setTimeout(() => {
+                chop.remove();
+            }, 4000);
+        }
+
+        setInterval(createChop, 1000);
+
+        body.addEventListener('mousemove', (e) => {
+            const cursor = document.createElement('div');
+            cursor.classList.add('cursor');
+            cursor.style.left = `${e.pageX - cursor.offsetWidth / 2}px`;
+            cursor.style.top = `${e.pageY - cursor.offsetHeight / 2}px`;
+
+            cursorContainer.appendChild(cursor);
+
+            // Remove cursor after 500ms (so the trail disappears)
+            setTimeout(() => {
+                cursor.remove();
+            }, 500);
+        });
+    </script>
+</body>
+</html>

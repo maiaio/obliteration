@@ -1,0 +1,119 @@
+body {
+    background: white;
+    font-family: Helvetica;
+    font-size: large;
+    margin: 0;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.cursor {
+    position: absolute;
+    width: 30px; /* Adjust the size of the cursor trail */
+    height: 30px;
+    background-image: url('cursor1.png');
+    background-size: cover;
+    pointer-events: none;
+    transition: transform 0.1s;
+    z-index: 1000; /* Ensures the cursor is above everything else */
+    opacity: 0.7;
+}
+
+.container {
+    text-align: center;
+    margin-top: 20px;
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+button {
+    font-size: 24px;
+    padding: 10px 20px;
+    cursor: pointer;
+    background-color: #f542b0;
+    border: 2px solid #000;
+    border-radius: 15px;
+    color: #000;
+}
+
+img {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.containerbottom {
+    position: relative;
+    min-height: 100vh;
+}
+
+.bottom-text {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    padding: 10px;
+}
+
+.branches {
+    width: 1100px;
+    height: auto;
+}
+
+.oval-shape {
+    width: 200px;
+    height: 100px;
+    background-color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    position: absolute;
+    top: 70%;
+    left: 10%;
+    opacity: 0;
+    animation: fadeInOut 4s infinite;
+}
+
+.oval-shape p {
+    font-size: 16px;
+    color: #333;
+    margin: 0;
+}
+
+.chop-shape {
+    width: 100px;
+    height: 100px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    position: absolute;
+    animation: fadeInOut 4s steps(1) infinite;
+}
+
+.chop-shape p {
+    font-size: 16px;
+    color: #333;
+    margin: 0;
+}
+
+@keyframes fadeInOut {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
