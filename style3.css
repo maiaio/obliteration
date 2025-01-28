@@ -1,0 +1,123 @@
+
+body {
+  background: WHITE;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: large;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  overflow: hidden; 
+  display: flex;
+  flex-direction: column; 
+  align-items: center; 
+}
+.bottom-text {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  padding: 10px;
+}
+
+
+
+.button-container {
+  text-align: center; 
+  margin-top: 20px; 
+  position: absolute;
+  top: 5%; 
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 100; 
+}
+
+
+button {
+  font-size: 24px;
+  padding: 10px 20px;
+  cursor: pointer;
+  background-color: #eef51d;
+  border: 2px solid #000;
+  border-radius: 15px;
+  color: #000;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+
+.container {
+  position: relative;
+  width: 90vw; 
+  height: 80vh; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  background-color: white;
+}
+
+
+.fibonacci-image {
+  position: absolute;
+  width: 60%;
+  height: auto;
+  z-index: 0; 
+}
+
+
+.image {
+  position: absolute;
+  width: 150px; 
+  height: auto;
+  opacity: 0;
+  transform: scale(0); 
+  animation: bloom 1s ease forwards; 
+  z-index: 1; 
+}
+
+
+@keyframes bloom {
+  0% {
+    opacity: 0;
+    transform: scale(0);
+  }
+  100% {
+    opacity: 0.9;
+    transform: scale(1);
+  }
+}
+
+
+.image.img1 {
+  left: 30%;
+  top: 25%;
+  animation-delay: 1s;
+}
+
+.image.img2 {
+  left: 45%;
+  top: 35%;
+  animation-delay: 1.5s;
+}
+
+.image.img3 {
+  left: 40%;
+  top: 50%;
+  animation-delay: 2s;
+}
+
+.image.img4 {
+  left: 60%;
+  top: 60%;
+  animation-delay: 2.5s;
+}
+
+.image.img5 {
+  left: 20%;
+  top: 70%;
+  animation-delay: 3s;
+}

@@ -1,0 +1,113 @@
+body {
+    background: WHITE;
+    font-family: Helvetica;
+    font-size: large;
+    margin: 0px;
+    text-align: center;
+    display: inline-block; 
+    padding: 0px;
+    background-size: cover; 
+    background-repeat: no-repeat; 
+    background-position: center center; 
+    height: 100vh;
+}
+
+.container {
+    text-align: center; 
+    margin-top: 20px;
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+button {
+    font-size: 24px; 
+    padding: 10px 20px;
+    cursor: pointer; 
+    background-color: #eef51d; 
+    border: 2px solid #000; 
+    border-radius: 15px; 
+    color: #000; 
+}
+
+.random-image {
+    position: absolute;
+    width: 150px; 
+    height: auto; 
+    cursor: pointer;
+}
+
+.containerbottom {
+    position: relative;
+    min-height: 100vh; 
+}
+
+.bottom-text {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%); 
+    text-align: center;
+    padding: 10px; 
+}
+
+.tap-text {
+    background: WHITE;
+    font-family: Helvetica;
+    font-size: large;
+    margin: 0px;
+    text-align: center;
+    display: inline-block; 
+    padding: 0px;
+    background-color: white;
+    font-family: Helvetica;
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #000;
+    opacity: 0;
+    animation: fadeIn 2s forwards;
+    z-index: 100;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.image-container img:nth-child(1) {
+    top: 10%;
+    left: 5%;
+    width: 400px;
+}
+.image-container img:nth-child(2) {
+    top: 45%;
+    left: 65%;
+    width: 400px;
+    height: auto;
+}
+.image-container img:nth-child(3) {
+    top: 60%;
+    left: 33%;
+    width: 450px;
+    height: auto;
+}
+
+.image-container img:nth-child(4) {
+    top: 20%;
+    left: 35%;
+    width: 400px;
+    height: auto;
+}
+.image-container img:nth-child(5) {
+    top: 10%;
+    left: 65%;
+    width: 400px;
+    height: auto;
+}
